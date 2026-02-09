@@ -716,8 +716,8 @@ function wc_ecc_handle_clear_add_link() {
 	$variations   = array();
 
 	if ( isset( $_GET['variations'] ) ) {
-		$raw_variations = sanitize_text_field( wp_unslash( $_GET['variations'] ) );
-		$decoded        = base64_decode( rawurldecode( $raw_variations ), true );
+		$raw_variations = wp_unslash( (string) $_GET['variations'] );
+		$decoded        = base64_decode( $raw_variations, true );
 		if ( false !== $decoded ) {
 			$parsed = json_decode( $decoded, true );
 			if ( is_array( $parsed ) ) {
@@ -782,7 +782,7 @@ function wc_ecc_get_clear_add_url( $product_id, $variation_id, $quantity, $varia
 		'product_id'    => $payload['product_id'],
 		'variation_id'  => $payload['variation_id'],
 		'quantity'      => $payload['quantity'],
-		'variations'    => rawurlencode( base64_encode( wp_json_encode( $payload['variations'] ) ) ),
+		'variations'    => base64_encode( wp_json_encode( $payload['variations'] ) ),
 		'_wc_ecc_nonce' => wp_create_nonce( $nonce_action ),
 	);
 
@@ -1116,4 +1116,3 @@ function wc_ecc_log( $message, $level = 'info', $always = false ) {
 		)
 	);
 }
-
