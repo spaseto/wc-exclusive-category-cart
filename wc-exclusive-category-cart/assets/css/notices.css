@@ -1,0 +1,78 @@
+/* WC Exclusive Category Cart notice styles for Classic + Blocks carts/checkout */
+:root {
+	--wc-ecc-error-bg: #fff1f1;
+	--wc-ecc-error-border: #c62828;
+	--wc-ecc-error-text: #5f1b1b;
+	--wc-ecc-success-bg: #f1fff5;
+	--wc-ecc-success-border: #1b8a45;
+	--wc-ecc-success-text: #0f4a25;
+	--wc-ecc-info-bg: #f2f8ff;
+	--wc-ecc-info-border: #2364b8;
+	--wc-ecc-info-text: #173c72;
+}
+
+.woocommerce-error,
+.woocommerce-message,
+.woocommerce-info,
+.wc-block-components-notice-banner {
+	border-radius: 8px;
+	border-left-width: 4px;
+	border-left-style: solid;
+	padding: 14px 16px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.woocommerce-error {
+	background: var(--wc-ecc-error-bg);
+	border-left-color: var(--wc-ecc-error-border);
+	color: var(--wc-ecc-error-text);
+}
+
+.woocommerce-message {
+	background: var(--wc-ecc-success-bg);
+	border-left-color: var(--wc-ecc-success-border);
+	color: var(--wc-ecc-success-text);
+}
+
+.woocommerce-info {
+	background: var(--wc-ecc-info-bg);
+	border-left-color: var(--wc-ecc-info-border);
+	color: var(--wc-ecc-info-text);
+}
+
+.wc-block-components-notice-banner {
+	background: var(--wc-ecc-info-bg);
+	border-left-color: var(--wc-ecc-info-border);
+	color: var(--wc-ecc-info-text);
+}
+
+.wc-block-components-notice-banner.is-error {
+	background: var(--wc-ecc-error-bg);
+	border-left-color: var(--wc-ecc-error-border);
+	color: var(--wc-ecc-error-text);
+}
+
+.wc-block-components-notice-banner.is-success {
+	background: var(--wc-ecc-success-bg);
+	border-left-color: var(--wc-ecc-success-border);
+	color: var(--wc-ecc-success-text);
+}
+
+.wc-block-components-notice-banner.is-info {
+	background: var(--wc-ecc-info-bg);
+	border-left-color: var(--wc-ecc-info-border);
+	color: var(--wc-ecc-info-text);
+}
+
+.wc-block-components-notice-banner__content,
+.wc-block-components-notice-banner__content p {
+	margin: 0;
+}
+
+.woocommerce-error a,
+.woocommerce-message a,
+.woocommerce-info a,
+.wc-block-components-notice-banner a {
+	font-weight: 600;
+	text-decoration: underline;
+}
