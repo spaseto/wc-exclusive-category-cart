@@ -10,6 +10,9 @@
 
 The plugin is ZIP-ready for **WP Admin -> Plugins -> Add New -> Upload Plugin**.
 
+## Download
+- Repository ZIP build: [wc-exclusive-category-cart.zip](https://github.com/spaseto/wc-exclusive-category-cart/raw/main/wc-exclusive-category-cart.zip)
+
 ## Full Feature List
 - Admin settings page under **WooCommerce -> Pickup Cart Rules**.
 - Category A selector from `product_cat` taxonomy (includes all child categories automatically).
@@ -112,6 +115,7 @@ Use this to validate behavior before switching to strict enforcement.
 ```text
 README.md
 LICENSE
+wc-exclusive-category-cart.zip
 wc-exclusive-category-cart/
   wc-exclusive-category-cart.php
   assets/css/notices.css
